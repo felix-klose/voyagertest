@@ -1,38 +1,37 @@
 package com.example.voyagertest.common.navigation.view.navigation.util
 
+import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.Navigator
-import com.example.voyagertest.common.navigation.view.navigation.FeatureNavigationParameters
-import com.example.voyagertest.common.navigation.view.navigation.FeatureNavigationTarget
-import com.example.voyagertest.common.navigation.view.navigation.FeatureScreen
+import com.example.voyagertest.common.navigation.di.DefaultNavigationTarget
+import com.example.voyagertest.common.navigation.view.navigation.NavigationParameters
+import com.example.voyagertest.common.navigation.view.navigation.NavigationTarget
 import com.example.voyagertest.common.navigation.view.navigation.NavigationRoute
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import javax.inject.Inject
 
 @ActivityRetainedScoped
 class NavigationUtils @Inject constructor(
-    featureNavigationTargets: Set<@JvmSuppressWildcards FeatureNavigationTarget>
+    private val navigationTargets: Map<NavigationRoute, @JvmSuppressWildcards NavigationTarget>,
+    @DefaultNavigationTarget private val defaultNavigationRoute: NavigationRoute,
+    @DefaultNavigationTarget private val defaultNavigationParameters: NavigationParameters
 ) {
-
-    private val navigationTargets: Map<NavigationRoute, (FeatureNavigationParameters) -> FeatureScreen> =
-        featureNavigationTargets.associate { target: FeatureNavigationTarget ->
-            target.route() to { parameters: FeatureNavigationParameters ->
-                target.screen(
-                    parameters,
-                    this
-                )
-            }
-        }
-
-    fun navigateToFeature(
+    fun navigateToRoute(
         navigator: Navigator,
         route: NavigationRoute,
-        parameters: FeatureNavigationParameters
+        parameters: NavigationParameters
     ) {
         val rootNavigator = getRootNavigator(navigator)
-        navigationTargets[route]?.let { it(parameters) }?.let { screen ->
+        navigationTargets[route]?.createScreen(parameters, this)?.let { screen ->
             rootNavigator.push(screen)
-        } ?: throw IllegalArgumentException("Navigation target ${route.routeName()} not found.")
+        } ?: throw IllegalArgumentException("Navigation target ${route.name} not found.")
     }
+
+    fun getDefaultScreen(): Screen =
+        navigationTargets[defaultNavigationRoute]
+            ?.createScreen(defaultNavigationParameters, this)
+            ?: throw IllegalStateException(
+                "Screen for default route ${defaultNavigationRoute.name} not found."
+            )
 
     private fun getRootNavigator(navigator: Navigator): Navigator {
         var rootNavigator = navigator

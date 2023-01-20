@@ -1,5 +1,5 @@
 package com.example.voyagertest.common.navigation.view.navigation
 
-interface NavigationRoute {
-    fun routeName(): String
+enum class NavigationRoute {
+    FEATURE_NAVIGATION_FEATURE1, FEATURE_NAVIGATION_FEATURE2;
 }

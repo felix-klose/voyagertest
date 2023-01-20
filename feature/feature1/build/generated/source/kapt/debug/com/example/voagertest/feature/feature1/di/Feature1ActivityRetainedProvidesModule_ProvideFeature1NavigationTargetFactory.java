@@ -2,7 +2,7 @@
 package com.example.voagertest.feature.feature1.di;
 
 import com.example.voagertest.feature.feature1.view.navigation.Feature1NavigationTarget;
-import com.example.voyagertest.common.navigation.view.navigation.FeatureNavigationTarget;
+import com.example.voyagertest.common.navigation.view.navigation.NavigationTarget;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;
@@ -17,7 +17,7 @@ import javax.inject.Provider;
     "unchecked",
     "rawtypes"
 })
-public final class Feature1ActivityRetainedProvidesModule_ProvideFeature1NavigationTargetFactory implements Factory<FeatureNavigationTarget> {
+public final class Feature1ActivityRetainedProvidesModule_ProvideFeature1NavigationTargetFactory implements Factory<NavigationTarget> {
   private final Feature1ActivityRetainedProvidesModule module;
 
   private final Provider<Feature1NavigationTarget> feature1NavigationTargetProvider;
@@ -30,7 +30,7 @@ public final class Feature1ActivityRetainedProvidesModule_ProvideFeature1Navigat
   }
 
   @Override
-  public FeatureNavigationTarget get() {
+  public NavigationTarget get() {
     return provideFeature1NavigationTarget(module, feature1NavigationTargetProvider.get());
   }
 
@@ -40,7 +40,7 @@ public final class Feature1ActivityRetainedProvidesModule_ProvideFeature1Navigat
     return new Feature1ActivityRetainedProvidesModule_ProvideFeature1NavigationTargetFactory(module, feature1NavigationTargetProvider);
   }
 
-  public static FeatureNavigationTarget provideFeature1NavigationTarget(
+  public static NavigationTarget provideFeature1NavigationTarget(
       Feature1ActivityRetainedProvidesModule instance,
       Feature1NavigationTarget feature1NavigationTarget) {
     return Preconditions.checkNotNullFromProvides(instance.provideFeature1NavigationTarget(feature1NavigationTarget));
