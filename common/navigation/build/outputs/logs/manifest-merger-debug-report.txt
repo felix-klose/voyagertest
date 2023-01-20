@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml:2:13-83
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml:2:13-83
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml:2:13-83
+	package
+		INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+		ADDED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml:2:13-83
+		INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+	xmlns:android
+		ADDED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml:2:23-81
+uses-sdk
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml reason: use-sdk injection requested
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+	android:targetSdkVersion
+		INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+		ADDED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+		INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+	android:minSdkVersion
+		INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+		ADDED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
+		INJECTED from D:\Local Projects\voyagertest\common\navigation\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest7589803070169805259.xml
